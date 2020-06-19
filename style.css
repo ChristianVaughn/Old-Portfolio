@@ -1,4 +1,6 @@
-/**, *:before, *:after {
+*,
+*:before,
+*:after {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -9,7 +11,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-}*/
+}
 
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 body {
@@ -27,6 +29,7 @@ body {
     border-bottom: none;
     background: #191a1d;
     display: block;
+    z-index: 100;
 }
 
 .site-header-inside {
@@ -85,13 +88,13 @@ body {
 }
 
 ul li a::after {
-    position: absolute;
+    position: relative;
     content: "";
     width: 100%;
     height: 3px;
     top: 100%;
     left: 0;
-    background: #4b6cc1;
+    background: #dd8c2f;
     transition: transform 0.25s;
     transform: scaleX(0);
     transform-origin: right;
@@ -100,4 +103,59 @@ ul li a::after {
 ul li a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.site-intro {
+    border-bottom: none;
+    background: #191a1d;
+    /* Move this to only if display is certain size */
+    background-size: 700px;
+    padding-top: 111px;
+    padding-bottom: 100px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 95%);
+}
+
+.site-intro-inside {
+    transition: all ease .45s;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    width: 92%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-intro-content {
+    padding-right: 147px;
+    text-align: left;
+}
+
+.site-intro-content>h1 {
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 400;
+}
+
+.site-intro-content>h2 {
+    color: #ababab;
+    margin-top: 35px;
+    font-weight: 300;
+    line-height: 140%;
+    font-size: 2.125rem;
+}
+
+.intro-button {
+    margin-top: 35px;
+    transition: all ease .3s;
+    font-size: 1.75rem;
+    padding: 26px 48px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #dd8c2f;
+    font-family: "Rubik", "Arial", sans-serif;
+    font-weight: 400;
+    color: #fff;
 }
