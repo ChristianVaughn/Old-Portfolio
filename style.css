@@ -1,0 +1,103 @@
+/**, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    line-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}*/
+
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+body {
+    font-family: "Rubik", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #5e5e5e;
+}
+
+.site-header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: none;
+    background: #191a1d;
+    display: block;
+}
+
+.site-header-inside {
+    display: flex;
+    align-items: center;
+    transition: all ease .3s;
+    /* Move this to only if display is certain size */
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    /*                                              */
+    width: 92%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header-logo {
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.header-logo>a {
+    color: #fff;
+    font-size: 1.75rem;
+    display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .063em;
+    text-decoration: none;
+}
+
+.header-menu {
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 50px;
+    font-size: 1.375rem;
+}
+
+.menu-link {
+    color: #ababab;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    transition: color ease .3s;
+}
+
+.menu-link:hover {
+    color: #fff;
+}
+
+ul li a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: #4b6cc1;
+    transition: transform 0.25s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
