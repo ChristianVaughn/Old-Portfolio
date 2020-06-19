@@ -137,6 +137,10 @@ ul li a:hover::after {
     text-align: left;
 }
 
+.site-intro-content.project {
+    text-align: center;
+}
+
 .site-intro-content>h1 {
     color: #fff;
     font-size: 4.5rem;
