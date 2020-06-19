@@ -13,6 +13,11 @@
     text-rendering: optimizeLegibility;
 }
 
+:root {
+    --main-color: #2F4858;
+    --accent-color: #F26419;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 body {
     font-family: "Rubik", "Arial", sans-serif;
@@ -27,7 +32,7 @@ body {
     top: 0;
     left: 0;
     border-bottom: none;
-    background: #191a1d;
+    background: var(--main-color);
     display: block;
     z-index: 100;
 }
@@ -88,13 +93,13 @@ body {
 }
 
 ul li a::after {
-    position: relative;
+    position: absolute;
     content: "";
     width: 100%;
     height: 3px;
     top: 100%;
     left: 0;
-    background: #dd8c2f;
+    background: var(--accent-color);
     transition: transform 0.25s;
     transform: scaleX(0);
     transform-origin: right;
@@ -107,7 +112,7 @@ ul li a:hover::after {
 
 .site-intro {
     border-bottom: none;
-    background: #191a1d;
+    background: var(--main-color);
     /* Move this to only if display is certain size */
     background-size: 700px;
     padding-top: 111px;
@@ -154,7 +159,7 @@ ul li a:hover::after {
     display: inline-block;
     cursor: pointer;
     border-radius: 5px;
-    background: #dd8c2f;
+    background: var(--accent-color);
     font-family: "Rubik", "Arial", sans-serif;
     font-weight: 400;
     color: #fff;
