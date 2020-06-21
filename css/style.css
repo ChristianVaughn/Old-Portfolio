@@ -25,6 +25,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     color: #5e5e5e;
+    background: #ecf0f1;
 }
 
 .site-header {
@@ -183,11 +184,12 @@ ul li a:hover::after {
     max-width: 300px;
     height: 350px;
     background: #FFF;
-    border-color: var(--main-color);
-    ;
-    border-width: 2px;
-    border-radius: 5px;
-    border-style: solid;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .16);
+    transition: all .35s ease-in-out 0s;
+}
+
+.grid-cell:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .24);
 }
 
 .grid-cell>article {
@@ -217,13 +219,20 @@ article>p {
 .card-button {
     margin-top: 10px;
     text-align: center;
-    font-size: 1.25rem;
-    padding: 26px 40px;
+    font-size: 1.2rem;
+    padding: 20px 40px;
     display: inline-block;
     cursor: pointer;
-    border-radius: 5px;
-    background: var(--accent-color);
     font-family: "Rubik", "Arial", sans-serif;
-    font-weight: 400;
-    color: #fff;
+    font-weight: 500;
+    transition: all .35s ease-in-out 0s;
+    border-color: var(--accent-color);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2px;
+}
+
+.card-button:hover {
+    background: var(--accent-color);
+    color: white;
 }
