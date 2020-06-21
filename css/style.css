@@ -16,6 +16,7 @@
 :root {
     --main-color: #2F4858;
     --accent-color: #F26419;
+    --card-color: #86bbd8;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Rubik');
@@ -171,16 +172,58 @@ ul li a:hover::after {
 
 .grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
     grid-auto-rows: minmax(100px, auto);
+    padding-left: 150px;
+    padding-top: 50px;
 }
 
 .grid-cell {
-    max-width: 500px;
+    max-width: 300px;
+    height: 350px;
+    background: #FFF;
+    border-color: var(--main-color);
+    ;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
 }
 
-img {
-    max-width: 100%;
-    max-height: 100%;
+.grid-cell>article {
+    text-align: center;
+}
+
+.card-head {
+    text-align: center;
+    padding: 30px;
+}
+
+.card-head>h2 {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.card-head>h3 {
+    font-weight: 600;
+}
+
+article>p {
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.card-button {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 26px 40px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--accent-color);
+    font-family: "Rubik", "Arial", sans-serif;
+    font-weight: 400;
+    color: #fff;
 }
