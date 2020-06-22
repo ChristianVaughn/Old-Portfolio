@@ -173,14 +173,24 @@ ul li a:hover::after {
 
 .grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 100%;
     grid-gap: 20px;
     grid-auto-rows: minmax(100px, auto);
     padding-left: 15px;
     padding-top: 50px;
     padding-bottom: 50px;
+}
 
-    
+@media only screen and (min-width: 768px) {
+    .grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 981px) {
+    .grid-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .grid-cell {
