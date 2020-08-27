@@ -1,0 +1,13 @@
+{
+    "title": "Radio choice",
+    "skip": "true",
+    "text": "Choose the one that says &quot;No. &quot",
+    "whyRight": " ",
+    "whyWrong": "No does not mean yes or maybe",
+    "optionType": "radio",
+    "options": [
+        "Yes",
+        "No",
+        "Maybe"
+    ]
+}
