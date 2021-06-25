@@ -38,6 +38,7 @@ var allowedKeys = {
   });
   
   function activateCheats() {
+    alert("C-C-C-C-COMBO BREAKER. \n Easter Egg found. \nWorks best on browsers that support colored address bars.")
     let scheme = document.querySelector('meta[name="theme-color"]');
     let hue = 0;
 
