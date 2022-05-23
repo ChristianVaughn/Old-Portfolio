@@ -347,3 +347,6 @@
     .submit-button:hover {
         background: #d9540d;
     }
+    .me{
+        max-width: 460px;
+    }
